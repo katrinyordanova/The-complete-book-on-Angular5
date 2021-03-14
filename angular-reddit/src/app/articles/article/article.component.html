@@ -1,0 +1,7 @@
+<div class="article">
+    <h1 class="name">{{ article.name }}</h1>
+    <p class="website">({{ removeWebsiteProtocol() }})</p>
+    <span class="points">{{ article.points }} points</span>
+    <button class="upVote-button" (click)="onUpVote()"><i class="fas fa-arrow-up"></i>upvote</button>
+    <button class="downVote-button" (click)="onDownVote()"><i class="fas fa-arrow-down"></i>downvote</button>
+</div>

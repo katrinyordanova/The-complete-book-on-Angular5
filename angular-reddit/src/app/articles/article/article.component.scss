@@ -1,0 +1,25 @@
+.article {
+    width: 25em;
+    margin: 0 auto;
+    
+    .website {
+        color: rgb(65, 62, 66);
+    }
+    
+    .upVote-button,
+    .downVote-button {
+        border: none;
+        color: rgb(76, 130, 198);
+        background: none;
+        margin-left: .5em;
+    
+        &:focus {
+            outline: none;
+        }
+    
+        .fas.fa-arrow-up,
+        .fas.fa-arrow-down{
+            margin-right: .5em;
+        }
+    }
+}
