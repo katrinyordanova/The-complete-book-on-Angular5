@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-reddit';
+
+  form = new FormGroup({
+    title: new FormControl(''),
+    link: new FormControl('')
+  });
+  
+  onSubmit() {
+
+  }
 }
