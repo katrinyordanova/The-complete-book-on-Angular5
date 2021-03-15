@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from './article.model';
-import { ArticleComponent } from './article/article.component';
+import { Article } from './article/article.model';
 
 @Component({
   selector: 'app-articles',
@@ -9,26 +8,26 @@ import { ArticleComponent } from './article/article.component';
 })
 export class ArticlesComponent implements OnInit {
   articles: Article[];
+  
   constructor() { 
     this.articles = [{
-        name: 'Angular 2',
+        title: 'Angular 2',
         website: 'https://angular.io',
-        points: 3
+        votes: 3
       },
       {
-        name: 'Fullstack',
+        title: 'Fullstack',
         website: 'https://fullstack.io',
-        points: 2
+        votes: 2
       },
       {
-        name: 'Angular Homepage',
+        title: 'Angular Homepage',
         website: 'https://angular.io',
-        points: 1
+        votes: 1
       }
     ]
   }
 
   ngOnInit(): void {
   }
-
 }
