@@ -3,15 +3,15 @@
     <h3 class="heading-label">Add Link</h3>
     <div class="title-container">
       <label class="title-label">Title:</label>
-      <input class="title-input" type="text">
+      <input class="title-input" type="text" #title>
     </div>
     <div class="link-container">
       <label class="link-label">Link:</label>
-      <input class="link-input" type="text">
+      <input class="link-input" type="text" #link>
     </div>
     <div class="submit-button-container">
-      <button (click)="onSubmit()" class="submit-button">Submit Link</button>
+      <button (click)="onSubmit(title.value, link.value)" class="submit-button">Submit Link</button>
     </div>
   </form>
-  <app-articles></app-articles>
+  <app-articles *ngIf="articles" [articles]="articles"></app-articles>
 </div>
