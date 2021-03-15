@@ -1,7 +1,14 @@
 <div class="article">
-    <h1 class="name">{{ article.name }}</h1>
-    <p class="website">({{ removeWebsiteProtocol() }})</p>
-    <span class="points">{{ article.points }} points</span>
-    <button class="upVote-button" (click)="onUpVote()"><i class="fas fa-arrow-up"></i>upvote</button>
-    <button class="downVote-button" (click)="onDownVote()"><i class="fas fa-arrow-down"></i>downvote</button>
+    <div class="votes-container">
+        <p class="votes-number">{{ article.votes }}</p>
+        <p class="votes-string-name">votes</p>
+    </div>
+    <div>
+        <h1 class="title">{{ article.title }}</h1>
+        <a href="{{article.website}}" class="website">({{ removeWebsiteProtocol() }})</a>
+        <div class="buttons-container">
+            <button class="upVote-button" (click)="onUpVote()"><i class="fas fa-arrow-up"></i>upvote</button>
+            <button class="downVote-button" (click)="onDownVote()"><i class="fas fa-arrow-down"></i>downvote</button>
+        </div>
+    </div>
 </div>
