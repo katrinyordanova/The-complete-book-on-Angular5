@@ -1,12 +1,8 @@
 .main-container {
     color: rgb(19, 19, 19);
     
-    .form,
-    .articles {
-        margin: 0 auto;
-    }
-
     .form {
+        margin: 0 auto;
         background: rgb(241, 249, 255);
         padding: 1em;
         border-radius: 5px;
@@ -29,6 +25,10 @@
         .title-input,
         .link-input {
             width: 100%;
+
+            &:focus {
+                outline: none;
+            }
         }
     
         .submit-button {
@@ -40,7 +40,10 @@
             border: none;
             border-radius: 5px;
             font-size: 15px;
+
+            &:focus {
+                outline: none;
+            }
         }
     }
-
 }

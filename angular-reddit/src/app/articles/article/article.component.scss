@@ -1,25 +1,50 @@
 .article {
-    width: 25em;
-    margin: 0 auto;
+    display: inline-flex;
     
     .website {
         color: rgb(65, 62, 66);
     }
     
-    .upVote-button,
-    .downVote-button {
-        border: none;
-        color: rgb(76, 130, 198);
-        background: none;
-        margin-left: .5em;
-    
-        &:focus {
-            outline: none;
+    .votes-container {
+        background: rgb(230, 230, 230);
+        width: 230px;
+        height: 150px;
+        text-align: center;
+        margin-right: 20px;
+
+        .votes-number {
+            font-size: 40px;
+            font-weight: 600;
+            padding-top: 23px;
         }
-    
-        .fas.fa-arrow-up,
-        .fas.fa-arrow-down{
-            margin-right: .5em;
+
+        .votes-string-name {
+            font-size: 17px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    .buttons-container {
+        padding-left: 8px;
+        margin-top: 43px;
+
+        .upVote-button,
+        .downVote-button {
+            border: none;
+            color: rgb(76, 130, 198);
+            font-weight: 700;
+            background: none;
+            margin-left: .5em;
+        
+            &:focus {
+                outline: none;
+            }
+        
+            .fas.fa-arrow-up,
+            .fas.fa-arrow-down{
+                margin-right: .5em;
+            }
         }
     }
 }
