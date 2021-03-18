@@ -8,10 +8,9 @@ import { Product } from '../../product.model';
 })
 export class ProductRowComponent implements OnInit {
   @Input() product: Product;
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

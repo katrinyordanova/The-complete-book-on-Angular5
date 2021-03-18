@@ -9,13 +9,24 @@ import { Product } from '../product.model';
 export class ProductsListComponent implements OnInit {
   @Input() products: Product[];
   @Output() onProductSelected: EventEmitter<Product>;
-  constructor() { }
 
-  ngOnInit(): void {
+  private currentProduct: Product;
+
+  constructor() {
     this.onProductSelected = new EventEmitter();
+   }
+
+  ngOnInit(): void { }
+
+  clicked(product: Product) {
+    this.currentProduct = product;
+    this.onProductSelected.emit(product);
   }
 
-  public tralala() {
-    this.onProductSelected.emit()
+  isSelected(product: Product) {
+    if(!product || !this.currentProduct) {
+      return false;
+    }
+    return product.sku === this.currentProduct.sku;
   }
 }
