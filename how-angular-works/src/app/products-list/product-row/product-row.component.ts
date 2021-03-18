@@ -2,12 +2,13 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../../product.model';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  selector: 'app-product-row',
+  templateUrl: './product-row.component.html',
+  styleUrls: ['./product-row.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductRowComponent implements OnInit {
   @Input() product: Product;
+  
   constructor() { }
 
   ngOnInit(): void {
