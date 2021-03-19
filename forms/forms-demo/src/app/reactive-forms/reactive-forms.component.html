@@ -1,0 +1,9 @@
+<div class="form">
+  <form>
+    <h1>Demo Form: SKU</h1>
+    <label class="sku-label">SKU</label>
+    <input placeholder="SKU" [formControl]="sku">
+  </form>
+  <button type="submit" (click)="onSubmit()">Submit</button>
+  <p>Current SKU: {{ this.sku.value }}</p>
+</div>
