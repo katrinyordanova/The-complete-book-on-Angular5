@@ -1,8 +1,14 @@
 <div class="form-builder">
     <h1>Demo form: SKU</h1>
-    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <form [formGroup]="form" [class.error]="!form.valid && form.touched">
         <label for="skuInput">SKU</label>
-        <input placeholder="SKU" id="skuInput" formControl="form.controls['sku']">
+        <input placeholder="SKU" id="skuInput" [formControl]="form.controls['sku']">
+        <div 
+            *ngIf="!form.controls['sku'].valid && form.controls['sku'].touched" 
+            [class.error]="!form.controls['sku'].valid && form.controls['sku'].touched"
+        >
+            <p>SKU is required</p>
+        </div>
     </form>
-    <button>Submit</button>
+    <button (click)="onSubmit(form.value)">Submit</button>
 </div>
