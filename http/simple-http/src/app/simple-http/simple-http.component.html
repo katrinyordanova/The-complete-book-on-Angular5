@@ -1,0 +1,6 @@
+<div class="simple-http-container">
+    <h2>Basic Request</h2>
+    <button (click)="makeRequest()">Make Request</button>
+    <div *ngIf="loader">Loading...</div>
+    <pre class="request-title">{{ responseData | json }}</pre>
+</div>
