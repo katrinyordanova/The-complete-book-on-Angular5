@@ -8,6 +8,7 @@ import { SearchResult } from '../search-result.model';
 })
 export class SearchResultComponent implements OnInit {
   @Input() result: SearchResult;
+  
   constructor() { }
 
   ngOnInit() {
