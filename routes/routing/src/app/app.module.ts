@@ -10,11 +10,10 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { ProtectedComponent } from './protected/protected.component';
-import { ProductsComponent } from './products/products.component';
 import { HeaderComponent } from './header/header.component';
 import { routes } from './routes';
 import { LoadingComponent } from './loading/loading.component';
-import { ProductComponent } from './product/product.component';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -24,13 +23,12 @@ import { ProductComponent } from './product/product.component';
     ContactComponent,
     LoginComponent,
     ProtectedComponent,
-    ProductsComponent,
     HeaderComponent,
-    LoadingComponent,
-    ProductComponent
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
+    ProductsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ AUTH_PROVIDERS, LoggedInGuard ],
