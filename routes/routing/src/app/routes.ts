@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { LoggedInGuard } from './logged-in.guard';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
@@ -19,7 +20,7 @@ export const routes: Routes = [
     {
       path: 'protected',
       component: ProtectedComponent,
-    //   canActivate: [ LoggedInGuard ]
+      canActivate: [ LoggedInGuard ]
     },
     // nested
     {
