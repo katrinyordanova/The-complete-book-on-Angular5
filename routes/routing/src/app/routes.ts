@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
 import { ProtectedComponent } from './protected/protected.component';
+import { productsRoutes as childRoutes } from './products/products-routes';
 
 export const routes: Routes = [
     // basic routes
@@ -26,7 +27,7 @@ export const routes: Routes = [
     {
       path: 'products',
       component: ProductsComponent,
-    //   children: childRoutes
+      children: childRoutes
     },
     { path: 'product/:id', component: ProductComponent }
   ]
