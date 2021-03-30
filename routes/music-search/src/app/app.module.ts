@@ -10,7 +10,8 @@ import { AlbumsComponent } from './albums/albums.component';
 import { TracksComponent } from './tracks/tracks.component';
 import { LoadingComponent } from './loading/loading.component';
 import { routes } from './routes';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { SpotifyService } from './spotify.service';
 
 
 @NgModule({
@@ -24,10 +25,10 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [SpotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
