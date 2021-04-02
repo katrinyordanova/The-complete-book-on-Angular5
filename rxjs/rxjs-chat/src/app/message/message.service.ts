@@ -29,8 +29,24 @@ export class MessageService {
     this.messages = this.updates
       .scan((messages: Message[], operation: IMessagesOperation) => {
         return operation(messages);
-      }, initialMessages); 
+      }, initialMessages)
+    .publishReplay(1)
+    .refCount(); 
 
+    // `create` takes a Message and then puts an operation (the inner function)
+    // on the `updates` stream to add the Message to the list of messages.
+    //
+    // That is, for each item that gets added to `create` (by using `next`)
+    // this stream emits a concat operation function.
+    //
+    // Next we subscribe `this.updates` to listen to this stream, which means
+    // that it will receive each operation that is created
+    //
+    // Note that it would be perfectly acceptable to simply modify the
+    // "addMessage" function below to simply add the inner operation function to
+    // the update stream directly and get rid of this extra action stream
+    // entirely. The pros are that it is potentially clearer. The cons are that
+    // the stream is no longer composable.
     this.create.map((message: Message): IMessagesOperation => {
       return (messages: Message[]) => {
         return messages.concat(message);
@@ -40,6 +56,8 @@ export class MessageService {
 
     this.newMessages.subscribe(this.create);
 
+    // similarly, `markThreadAsRead` takes a Thread and then puts an operation
+    // on the `updates` stream to mark the Messages as read
     this.markThreadAsRead.map((thread: Thread) => {
       return (messages: Message[]) => {
         return messages.map((message: Message) => {
