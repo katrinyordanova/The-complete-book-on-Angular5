@@ -6,7 +6,7 @@ import { uuid } from '../../util/uuid';
 */
 export class Thread {
     id: string;
-    lastMessage: string;
+    lastMessage: Message;
     name: string;
     avatarSrc: string;
 
