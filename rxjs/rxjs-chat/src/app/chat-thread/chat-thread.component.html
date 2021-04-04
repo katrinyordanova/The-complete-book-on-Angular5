@@ -1,0 +1,12 @@
+<div class="conversation">
+  <div class="pull-lef">
+    <!-- <img src="{{ thread.avatarSrc }}" alt="thread-avatar"> -->
+  </div>
+  <div class="media-body">
+    <h5>{{thread.name}}
+      <span *ngIf="selected">&bull;</span>
+    </h5>
+    <small>{{thread.lastMessage.text}}</small>
+  </div>
+  <a (click)="clicked($event)">Select</a>
+</div>
