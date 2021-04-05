@@ -1,0 +1,46 @@
+.navbar.navbar-default {
+    background: rgb(248, 248, 248);
+    
+    
+    .container-fluid {
+        display: flex;
+        height: 70px;
+        color: rgb(17, 231, 238);
+        
+        .navbar-header,
+        .navbar-text.navbar-right {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .navbar-header {
+            flex: 1;
+
+            .navbar-brand {
+                color: rgb(127, 123, 121);
+                padding-left: 15px;
+                text-decoration: none;
+            }
+        }
+
+        .navbar-text.navbar-right {
+            .btn.btn-primary {
+                color: rgb(255, 255, 255);
+                background-color: rgb(51, 120, 185);
+                font-size: 15px;
+                padding: 8px 10px;
+                border: rgb(51, 120, 185);
+                border-radius: 5px;
+    
+                .badge {
+                    color: rgb(51, 120, 185);
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 100%;
+                    padding: 2px 6px;
+                }
+            }
+        }
+    }
+
+}

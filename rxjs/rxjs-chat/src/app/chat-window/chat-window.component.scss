@@ -1,0 +1,44 @@
+.panel.panel-default {
+    width: 20%;
+    position: fixed;
+    bottom: 0;
+    right: 70px;
+
+    .panel-title { 
+        background-color: rgb(102, 102, 102);
+        color: rgb(255, 255, 255);
+        padding: 6px 8px;
+        border-radius: 5px 5px 0px 0px; 
+        text-align: center;
+        
+        .fas.fa-comment-alt {
+            padding-left: 3px;
+            padding-right: 2px;
+        }
+    }
+
+    .panel-body.msg-container-base {
+        background-color: rgb(229, 229, 229);
+    }
+
+    .panel-footer {
+        background-color: rgb(253, 244, 229);
+        text-align: center;
+        padding: 10px;
+        
+        .message-input {
+            border: 1px solid rgb(214, 214, 214);
+            padding: 8px;
+        }
+
+        .send-button {
+            padding: 6.8px;
+            background-color: rgb(51, 120, 185);
+            color: #fdf4e5;
+            border: 1px solid rgb(51, 120, 185);
+            border-radius: 2px;
+            margin-left: -4px;
+            margin: 1px 0 0 -4px
+        }
+    }
+}
