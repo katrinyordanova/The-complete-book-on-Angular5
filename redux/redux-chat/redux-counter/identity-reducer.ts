@@ -1,7 +1,8 @@
 export interface Action {
     // action - INCREMENT | ADD_USER
     type: string;
-    payload?: any
+    payload?: any;
+    created_at?: Date
 }
 
 export interface Reducer<T> {

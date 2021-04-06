@@ -1,7 +1,7 @@
 import { Action, Reducer } from "./identity-reducer";
 import { reducer } from "./plus-action";
 
-class Store<T> {
+export class Store<T> {
     private _state: T;
 
     constructor(
