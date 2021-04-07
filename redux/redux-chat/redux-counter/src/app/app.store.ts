@@ -12,7 +12,7 @@ const devtools: StoreEnhancer<AppState> =
     window['devToolsExtension']() : f => f;
 
 export function createAppStore(): Store<AppState> {
-    return createStore<AppState, any, any, any> (
+    return createStore<AppState> (
         reducer,
         compose(devtools)
     )
