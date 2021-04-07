@@ -28,4 +28,4 @@ let reducer: Reducer<AppState> =
         }
     }
 
-let store: Store<AppState> = createStore<AppState>(reducer)
+let store: Store<AppState> = createStore<AppState, any, any, any>(reducer)
