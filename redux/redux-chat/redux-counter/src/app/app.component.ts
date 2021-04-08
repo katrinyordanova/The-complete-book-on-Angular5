@@ -18,7 +18,7 @@ export class AppComponent {
     this.readState();
   }
 
-  redState() {
+  readState() {
     const state: AppState = this.store.getState() as AppState;
     this.counter = state.counter;
   }
