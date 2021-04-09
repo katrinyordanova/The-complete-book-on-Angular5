@@ -1,6 +1,6 @@
 import { combineReducers, Reducer } from "redux";
-import { ThreadsState } from "./thread/threads.reducer";
-import { UsersState } from "./user/users.reducer";
+import { ThreadReducer, ThreadsState } from "./thread/threads.reducer";
+import { UsersReducer, UsersState } from "./user/users.reducer";
 
 export interface AppState {
     users: UsersState,
@@ -8,7 +8,7 @@ export interface AppState {
 }
 
 const rootReducer: Reducer<AppState> = combineReducers<AppState>({
-    users: UserReducer,
+    users: UsersReducer,
     threads: ThreadReducer
 });
 
