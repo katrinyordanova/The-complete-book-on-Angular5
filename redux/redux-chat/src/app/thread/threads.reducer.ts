@@ -1,4 +1,5 @@
 import { Action } from "redux";
+import { createSelector } from 'reselect';
 import { Thread } from "./thread";
 import * as ThreadAction from './thread.actions';
 
@@ -75,3 +76,16 @@ export const ThreadReducer =
             default: return state;
         }
     }
+
+export const getThreadState = (state): ThreadsState => state.threads;
+
+export const getThreadEntities = createSelector(
+    getThreadState,
+    (state: ThreadsState) => state.entities
+)
+
+export const getCurrentThread = createSelector(
+    getThreadEntities,
+    getThreadState,
+    ( entities: ThreadsEntities, state: ThreadsState ) =>
+      entities[state.currentThreadId] );
