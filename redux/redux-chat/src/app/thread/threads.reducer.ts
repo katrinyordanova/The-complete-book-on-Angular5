@@ -1,5 +1,6 @@
 import { Action } from "redux";
 import { createSelector } from 'reselect';
+import { Message } from "../message/message";
 import { Thread } from "./thread";
 import * as ThreadAction from './thread.actions';
 
@@ -89,3 +90,30 @@ export const getCurrentThread = createSelector(
     getThreadState,
     ( entities: ThreadsEntities, state: ThreadsState ) =>
       entities[state.currentThreadId] );
+
+export const getAllThreads = createSelector(
+    getThreadEntities,
+    ( entities: ThreadsEntities ) => Object.keys(entities)
+        .map((threadId) => entities[threadId])
+)
+
+export const getUnreadMessagesCount = createSelector(
+    getAllThreads,
+    ( threads: Thread[] ) => threads.reduce(
+        (unreadCount: number, thread: Thread) => {
+          thread.messages.forEach((message: Message) => {
+            if (!message.isRead) {
+              ++unreadCount;
+            }
+          });
+          return unreadCount;
+        },
+    0)
+);
+  
+export const getAllMessages = createSelector(
+getAllThreads,
+( threads: Thread[] ) =>
+    threads.reduce( // gather all messages
+    (messages, thread) => [...messages, ...thread.messages],
+    []).sort((m1, m2) => m1.sentAt - m2.sentAt)); 
