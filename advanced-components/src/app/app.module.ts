@@ -7,6 +7,7 @@ import { InlineStyleComponent } from './styling/inline-style/inline-style.compon
 import { ExternalStyleComponent } from './styling/external-style/external-style.component';
 import { NativeEncapsulationComponent } from './styling/native-encapsulation/native-encapsulation.component';
 import { NoEncapsulationComponent } from './styling/no-encapsulation/no-encapsulation.component';
+import { HostModule } from './host/host.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { NoEncapsulationComponent } from './styling/no-encapsulation/no-encapsul
     NoEncapsulationComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HostModule
   ],
   providers: [],
   bootstrap: [AppComponent]
