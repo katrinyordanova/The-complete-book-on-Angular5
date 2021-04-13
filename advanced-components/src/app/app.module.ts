@@ -8,6 +8,7 @@ import { ExternalStyleComponent } from './styling/external-style/external-style.
 import { NativeEncapsulationComponent } from './styling/native-encapsulation/native-encapsulation.component';
 import { NoEncapsulationComponent } from './styling/no-encapsulation/no-encapsulation.component';
 import { HostModule } from './host/host.module';
+import { ContentProjectionDemoComponent } from './content-projection/content-projection-demo/content-projection-demo.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HostModule } from './host/host.module';
     InlineStyleComponent,
     ExternalStyleComponent,
     NativeEncapsulationComponent,
-    NoEncapsulationComponent
+    NoEncapsulationComponent,
+    ContentProjectionDemoComponent
   ],
   imports: [
     BrowserModule,
