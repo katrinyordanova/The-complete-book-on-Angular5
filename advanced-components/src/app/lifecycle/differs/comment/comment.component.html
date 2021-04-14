@@ -1,0 +1,12 @@
+<div>
+  <div class="summary">
+    <p>{{ comment.author }}</p> posted a comment
+    <p>1 Hour ago</p>
+  </div>
+  <p>{{ comment.comment }}</p>
+  <div class="buttons">
+    <button (click)="remove()">Remove</button>
+    <button (click)="clear()">Clear</button>
+    <button (click)="like()">{{ comment.likes }} Like</button>
+  </div>
+</div>
