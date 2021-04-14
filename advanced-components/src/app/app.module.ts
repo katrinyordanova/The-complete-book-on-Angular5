@@ -3,28 +3,24 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { InlineStyleComponent } from './styling/inline-style/inline-style.component';
-import { ExternalStyleComponent } from './styling/external-style/external-style.component';
-import { NativeEncapsulationComponent } from './styling/native-encapsulation/native-encapsulation.component';
-import { NoEncapsulationComponent } from './styling/no-encapsulation/no-encapsulation.component';
 import { HostModule } from './host/host.module';
-import { ContentProjectionDemoComponent } from './content-projection/content-projection-demo/content-projection-demo.component';
 import { TabsModule } from './tabs/tabs.module';
+import { LifecycleModule } from './lifecycle/lifecycle.module';
+import { ContentProjectionModule } from './content-projection/content-projection.module';
+import { StylingModule } from './styling/styling.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    InlineStyleComponent,
-    ExternalStyleComponent,
-    NativeEncapsulationComponent,
-    NoEncapsulationComponent,
-    ContentProjectionDemoComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    ContentProjectionModule,
+    StylingModule,
     HostModule,
-    TabsModule
+    TabsModule,
+    LifecycleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
