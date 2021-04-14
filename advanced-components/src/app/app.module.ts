@@ -9,6 +9,7 @@ import { NativeEncapsulationComponent } from './styling/native-encapsulation/nat
 import { NoEncapsulationComponent } from './styling/no-encapsulation/no-encapsulation.component';
 import { HostModule } from './host/host.module';
 import { ContentProjectionDemoComponent } from './content-projection/content-projection-demo/content-projection-demo.component';
+import { TabsModule } from './tabs/tabs.module';
 
 
 @NgModule({
@@ -18,11 +19,12 @@ import { ContentProjectionDemoComponent } from './content-projection/content-pro
     ExternalStyleComponent,
     NativeEncapsulationComponent,
     NoEncapsulationComponent,
-    ContentProjectionDemoComponent
+    ContentProjectionDemoComponent,
   ],
   imports: [
     BrowserModule,
-    HostModule
+    HostModule,
+    TabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
