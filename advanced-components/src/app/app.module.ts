@@ -8,6 +8,7 @@ import { TabsModule } from './tabs/tabs.module';
 import { LifecycleModule } from './lifecycle/lifecycle.module';
 import { ContentProjectionModule } from './content-projection/content-projection.module';
 import { StylingModule } from './styling/styling.module';
+import { TemplatesModule } from './templates/templates.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { StylingModule } from './styling/styling.module';
     StylingModule,
     HostModule,
     TabsModule,
-    LifecycleModule
+    LifecycleModule,
+    TemplatesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
