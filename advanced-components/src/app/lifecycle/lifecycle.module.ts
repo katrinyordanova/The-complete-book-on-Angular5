@@ -6,6 +6,8 @@ import { OnChangesComponent } from './on-changes/on-changes/on-changes.component
 import { OnChangesDemoComponent } from './on-changes/on-changes-demo/on-changes-demo.component';
 import { CommentComponent } from './differs/comment/comment.component';
 import { ComponentListComponent } from './differs/component-list/component-list.component';
+import { AllHooksComponent } from './all-hooks/all-hooks/all-hooks.component';
+import { AllHooksDemoComponent } from './all-hooks/all-hooks-demo/all-hooks-demo.component';
 
 @NgModule({
     imports: [ CommonModule ],
@@ -15,7 +17,9 @@ import { ComponentListComponent } from './differs/component-list/component-list.
         OnChangesComponent,
         OnChangesDemoComponent,
         CommentComponent,
-        ComponentListComponent
+        ComponentListComponent,
+        AllHooksComponent,
+        AllHooksDemoComponent
     ],
     exports: [
         OnInitComponent,
@@ -23,7 +27,9 @@ import { ComponentListComponent } from './differs/component-list/component-list.
         OnChangesComponent,
         OnChangesDemoComponent,
         CommentComponent,
-        ComponentListComponent
+        ComponentListComponent,
+        AllHooksComponent,
+        AllHooksDemoComponent
     ]
 })
 export class LifecycleModule{}
