@@ -10,6 +10,8 @@ import { ContentProjectionModule } from './content-projection/content-projection
 import { StylingModule } from './styling/styling.module';
 import { TemplatesModule } from './templates/templates.module';
 import { ProfileModule } from './change-detection/on-push-demo/profile.module';
+import { ObservableChangeDetectionComponent } from './change-detection/observable-demo/observable-change-detection/observable-change-detection.component';
+import { ObservablesDemoComponent } from './change-detection/observable-demo/observables-demo/observables-demo.component';
 
 
 @NgModule({
