@@ -9,6 +9,7 @@ import { LifecycleModule } from './lifecycle/lifecycle.module';
 import { ContentProjectionModule } from './content-projection/content-projection.module';
 import { StylingModule } from './styling/styling.module';
 import { TemplatesModule } from './templates/templates.module';
+import { ProfileModule } from './change-detection/on-push-demo/profile.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { TemplatesModule } from './templates/templates.module';
     HostModule,
     TabsModule,
     LifecycleModule,
-    TemplatesModule
+    TemplatesModule,
+    ProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]
