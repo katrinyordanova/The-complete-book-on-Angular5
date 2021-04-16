@@ -1,0 +1,19 @@
+<div class="container">
+  <ul *ngBookFor="let person of people">
+    <p>Name: {{ person.name }}</p>
+    <p>Age: {{ person.age }}</p>
+    <button (click)="remove(person)">Remove Person</button>
+  </ul>
+  <p>Add a person</p>
+  <div class="form">
+    <div class="name">
+      <label>Name</label>
+      <input #name placeholder="Martin">
+    </div>
+    <div class="age">
+      <label>Age</label>
+      <input #age placeholder="23">
+    </div>
+    <button (click)="add(name.value, age.value)">Add Person</button>
+  </div>
+</div>
