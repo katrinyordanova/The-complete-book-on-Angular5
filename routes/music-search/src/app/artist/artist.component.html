@@ -1,0 +1,5 @@
+<div *ngIf="artist" class="container">
+  <h1>{{ artist.name }}</h1>
+  <p><img src="{{ artist.images[0].url }}"></p>
+  <button (click)="back()">Back</button>
+</div>
