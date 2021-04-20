@@ -19,7 +19,7 @@ module.exports = function(config) {
             './src/test.ts': [ '@angular/cli' ]
         },
         mime: {
-            'texts/x-typescript': ['ts', 'txs']
+            'text/x-typescript': ['ts', 'tsx']
         },
         coverageIstanbulReporter: {
             reports: [ 'html', 'lcovonly' ],
@@ -32,10 +32,10 @@ module.exports = function(config) {
             ? ['progress', 'coverage-istanbul']
             : ['progress', 'kjhtml'],
         port: 9876,
-        color: true,
+        colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browser: ['Chrome'],
+        browsers: ['Chrome'],
         singleRun: false
     });
-}
+};
