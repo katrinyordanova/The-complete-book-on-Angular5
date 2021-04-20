@@ -1,4 +1,4 @@
-import { TestBed } from "@angular/core/testing";
+import { ComponentFixture, TestBed, tick } from "@angular/core/testing";
 import { ActivatedRoute, provideRoutes, Router, Routes } from "@angular/router";
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -39,6 +39,19 @@ export function configureMusicTests() {
             }
         ]
     });
+}
+
+export function advance(fixture: ComponentFixture<any>): void {
+    tick();
+    fixture.detectChanges();
+}
+
+export function createRoot(router: Router, componentType: any): ComponentFixture<any> {
+    const f = TestBed.createComponent(componentType);
+    advance(f);
+    (<any>router).initialNavigation();
+    advance(f);
+    return f;
 }
 
 export class TestModule{}
