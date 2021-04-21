@@ -3,7 +3,7 @@
     <form [formGroup]="form" [class.error]="!form.valid && form.touched">
         <label for="skuInput">SKU</label>
         <input placeholder="SKU" id="skuInput" [formControl]="form.controls['sku']">
-        <div 
+        <div class="error-message"
             *ngIf="!form.controls['sku'].valid && form.controls['sku'].touched" 
             [class.error]="!form.controls['sku'].valid && form.controls['sku'].touched"
         >

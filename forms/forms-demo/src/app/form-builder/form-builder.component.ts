@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-builder',
@@ -8,10 +8,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FormBuilderComponent implements OnInit {
   form: FormGroup;
+  sku: AbstractControl;
+
   constructor(fb: FormBuilder) {
     this.form = fb.group({
       sku: ['', Validators.required]
-    })
+    });
+
+    this.sku = this.form.controls['sku'];
+
+    this.sku.valueChanges.subscribe(
+      (value: string) => {
+        console.log(value);
+      }
+    );
 
     this.form.valueChanges.subscribe(
       (value: string) => {
@@ -26,5 +36,4 @@ export class FormBuilderComponent implements OnInit {
   onSubmit(formValue: string) {
     console.log(formValue);
   }
-
 }
